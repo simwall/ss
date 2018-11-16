@@ -205,7 +205,7 @@ pre_install(){
     # Set ShadowsocksR config port
     while true
     do
-    dport= 56743 #$(shuf -i 9000-19999 -n 1)
+    dport= $(shuf -i 56743-56743 -n 1)
     echo -e "Please enter a port for ShadowsocksR [1-65535]"
     read -p "(Default port: ${dport}):" shadowsocksport
     [ -z "${shadowsocksport}" ] && shadowsocksport=${dport}
